@@ -15,8 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins')
-require("mcheviron/options")
-require("mcheviron/keymaps")
-require("mcheviron/lsp")
-require("mcheviron/treesitter")
-require("mcheviron/sqlformat")
+require("config/options")
+require("config/keymaps")
+require("config/lsp")
+require("config/treesitter")
+require("config/sqlformat")

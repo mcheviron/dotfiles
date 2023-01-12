@@ -75,3 +75,7 @@ vim.cmd([[
     autocmd BufWinEnter *.* silent! loadview
   augroup END
 ]])
+-- run 'chezmoi apply' everytime you write to a dotfile
+vim.cmd([[
+  autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+]])

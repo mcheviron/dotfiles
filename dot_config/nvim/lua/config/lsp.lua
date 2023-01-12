@@ -1,4 +1,3 @@
----------------------------------------------------------
 -- LSP settings.
 -- Disable virtual text
 vim.diagnostic.config({ virtual_text = true })
@@ -129,9 +128,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- Turn on lsp status information
--- Replaced by noice.nvim
--- require('fidget').setup()
 
 -- nvim-cmp setup
 local cmp = require 'cmp'

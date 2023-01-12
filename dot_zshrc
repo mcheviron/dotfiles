@@ -185,6 +185,10 @@ alias tldr='tldr --theme ocean'
 alias sudo='sudo '
 alias cf=copyfile
 alias lg=lazygit
+alias cm="chezmoi"
+alias ce="chezmoi edit"
+alias cva="chezmoi -v apply"
+alias cdiff="chezmoi diff"
 
 
 alias -s {py,go,c,cpp,md,txt,html,css}=nvim
