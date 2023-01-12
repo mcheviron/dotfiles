@@ -184,9 +184,10 @@ alias bat='bat --theme=Dracula'
 alias tldr='tldr --theme ocean'
 alias sudo='sudo '
 alias cf=copyfile
+alias lg=lazygit
 
 
-# alias -s {py,go,c,cpp,md,txt,html,css}=lvim
+alias -s {py,go,c,cpp,md,txt,html,css}=nvim
 
 # set default editor to Vim
 # if type lvim 1>/dev/null; then 
