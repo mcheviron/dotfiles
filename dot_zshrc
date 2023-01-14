@@ -86,7 +86,6 @@ plugins=(
         zsh-syntax-highlighting
         copypath
         copyfile
-        poetry
         # vi-mode
         )
 
@@ -181,10 +180,11 @@ alias ip='ip -color=auto'
 alias cat='bat --theme=Dracula'
 alias bat='bat --theme=Dracula'
 # alias fd='fdfind'
-alias tldr='tldr --theme ocean'
+# alias tldr='tldr --theme ocean'
 alias sudo='sudo '
 alias cf=copyfile
 alias lg=lazygit
+alias ld=lazydocker
 alias cm="chezmoi"
 alias ce="chezmoi edit"
 alias cva="chezmoi -v apply"
@@ -219,6 +219,7 @@ export PATH=$PATH:$HOME/.cargo/env
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/Homebrew/bin
+export GREENLIGHT_DB_DSN="postgres://greenlight:pa55word@localhost/greenlight?sslmode=disable"
 
 
 

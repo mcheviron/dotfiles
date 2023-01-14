@@ -29,15 +29,9 @@ vim.keymap.set({ 'n' }, "<C-Right>", ":vertical resize +2<CR>", { silent = true 
 -- Navigate buffers
 vim.keymap.set({ 'n' }, "<S-l>", ":bnext<CR>", { silent = true })
 vim.keymap.set({ 'n' }, "<S-h>", ":bprevious<CR>", { silent = true })
--- Move text up and down
-vim.keymap.set({ 'n' }, "<A-j>", "<Esc>:m .+1<CR>==", { silent = true })
-vim.keymap.set({ 'n' }, "<A-k>", "<Esc>:m .-2<CR>==", { silent = true })
 -- Stay in indent mode
 vim.keymap.set({ 'v' }, "<", "<gv", { silent = true })
 vim.keymap.set({ 'v' }, ">", ">gv", { silent = true })
--- Move text up and down
-vim.keymap.set({ 'v' }, "<A-j>", ":m .+1<CR>==", { silent = true })
-vim.keymap.set({ 'v' }, "<A-k>", ":m .-2<CR>==", { silent = true })
 
 
 vim.keymap.set({ 'i' }, "<C-enter>", "<esc>o", { silent = true })

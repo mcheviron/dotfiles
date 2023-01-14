@@ -14,8 +14,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- colorscheme
 -- vim.cmd [[ colorscheme catppuccin-macchiato ]]
--- vim.cmd [[ colorscheme catppuccin-frappe ]]
-vim.cmd [[ colorscheme tokyonight-storm ]]
+vim.cmd [[ colorscheme catppuccin-frappe ]]
+-- vim.cmd [[ colorscheme tokyonight-moon ]]
+-- vim.cmd [[ colorscheme nord ]]
 
 -- Set the timeout to show WhichKey
 vim.o.timeoutlen = 600
@@ -79,3 +80,5 @@ vim.cmd([[
 vim.cmd([[
   autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
 ]])
+-- Enable syntax highlighting for go.mod
+vim.cmd [[ autocmd BufNewFile,BufRead "go.mod" setfiletype go ]]

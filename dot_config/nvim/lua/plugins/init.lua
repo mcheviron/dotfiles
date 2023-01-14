@@ -61,14 +61,14 @@ return {
   },
   'p00f/nvim-ts-rainbow',
   'folke/lsp-colors.nvim',
-  {
-    'rmagatti/goto-preview',
-    config = function()
-      require('goto-preview').setup {
-        default_mappings = true; -- Bind default mappings
-      }
-    end
-  },
+  -- {
+  --   'rmagatti/goto-preview',
+  --   config = function()
+  --     require('goto-preview').setup {
+  --       default_mappings = true; -- Bind default mappings
+  --     }
+  --   end
+  -- },
   -- 'dstein64/vim-startuptime',
   {
     'nvim-treesitter/playground',
@@ -77,13 +77,6 @@ return {
   {
     'RRethy/vim-illuminate',
     lazy = false,
-  },
-  { -- Better tooling for Golang
-    "olexsmir/gopher.nvim",
-    dependencies = { -- dependencies
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
   },
   -- Neo-tree
   {
@@ -132,6 +125,7 @@ return {
   'Mofiqul/vscode.nvim',
   'folke/tokyonight.nvim',
   'catppuccin/nvim',
+  'shaunsingh/nord.nvim',
 
   -- Fancier statusline
   { 'lukas-reineke/indent-blankline.nvim',
@@ -150,5 +144,16 @@ return {
   end
   },
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  {
+    'echasnovski/mini.move',
+    config = function()
+      require('mini.move').setup()
+    end
+  },
+  {
+    "williamboman/mason.nvim",
+    "jose-elias-alvarez/null-ls.nvim",
+    "jay-babu/mason-null-ls.nvim",
+  },
 
 }

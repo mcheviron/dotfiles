@@ -1,0 +1,49 @@
+return {
+  -- {
+  --   'VonHeikemen/lsp-zero.nvim',
+  --   branch = 'v1.x',
+  --   dependencies = {
+  --     -- LSP Support
+  --     { 'neovim/nvim-lspconfig' }, -- Required
+  --     { 'williamboman/mason.nvim' }, -- Optional
+  --     { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+  --
+  --     -- Autocompletion
+  --     { 'hrsh7th/nvim-cmp' }, -- Required
+  --     { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+  --     { 'hrsh7th/cmp-buffer' }, -- Optional
+  --     { 'hrsh7th/cmp-path' }, -- Optional
+  --     { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+  --     { 'hrsh7th/cmp-nvim-lua' }, -- Optional
+  --
+  --     -- Snippets
+  --     { 'L3MON4D3/LuaSnip' }, -- Required
+  --     { 'rafamadriz/friendly-snippets' }, -- Optional
+  --   },
+  --   config = function()
+  --     -- Learn the keybindings, see :help lsp-zero-keybindings
+  --     -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
+  --     local lsp = require('lsp-zero')
+  --     lsp.preset('recommended')
+  --
+  --     -- (Optional) Configure lua language server for neovim
+  --     lsp.nvim_workspace()
+  --
+  --     lsp.set_preferences({
+  --       set_lsp_keymaps = { omit = { '<F2>', 'gr' } }
+  --     })
+  --
+  --     -- Special keymaps
+  --     local nmap = function(keys, func, desc)
+  --       if desc then
+  --         desc = 'LSP: ' .. desc
+  --       end
+  --
+  --       vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+  --     end
+  --     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+  --
+  --     lsp.setup()
+  --   end
+  -- }
+}
