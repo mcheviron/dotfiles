@@ -239,5 +239,5 @@ setopt hist_verify            # show command with history expansion to user befo
     ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 
 zstyle ':completion:*' menu select
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/.local/zig-0.12:$PATH"
