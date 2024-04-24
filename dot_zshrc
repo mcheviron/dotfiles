@@ -155,6 +155,10 @@ set -o noclobber
 export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin
 export PATH="$HOME/.local/zig-0.12:$PATH"
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
 # ======================= KALI CONFIG ===============================
 
 setopt autocd              # change directory just by typing its name
