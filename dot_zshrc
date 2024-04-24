@@ -239,5 +239,28 @@ setopt hist_verify            # show command with history expansion to user befo
     ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 
 zstyle ':completion:*' menu select
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/.local/zig-0.12:$PATH"
+
+function ensure_zsh_syntax_highlighting() {
+  local zsh_syntax_highlighting_path="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+
+  if [ ! -d "$zsh_syntax_highlighting_path" ]; then
+    echo "zsh-syntax-highlighting not found. Installing..."
+    if command -v brew >/dev/null 2>&1; then
+      echo "Installing zsh-syntax-highlighting using Homebrew..."
+      brew install zsh-syntax-highlighting
+    else
+      echo "Homebrew not found. Cloning zsh-syntax-highlighting repository..."
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$zsh_syntax_highlighting_path"
+    fi
+  fi
+
+  local zsh_syntax_highlighting_file="${zsh_syntax_highlighting_path}/zsh-syntax-highlighting.zsh"
+  if [ -f "$zsh_syntax_highlighting_file" ]; then
+    source "$zsh_syntax_highlighting_file"
+  else
+    echo "zsh-syntax-highlighting.zsh not found. Please check the installation."
+  fi
+}
+
+ensure_zsh_syntax_highlighting
