@@ -136,11 +136,15 @@ alias kuat="sed -i '' -e 's/.*current-context.*/current-context: aks-dev-eastus-
 alias kdev="sed -i '' -e 's/.*current-context.*/current-context: aks-dev-eastus-onekey-k8s/g' ~/.kube/config"
 alias ko="kubectl -n onekey-api"
 alias v="nvim"
-#alias cpath="copypath"
-alias cm="chezmoi"
 alias cfile="copyfile"
+alias cpath="copypath"
+alias so="source ~/.zshrc"
+
+alias cm="chezmoi"
+alias cmcd="chezmoi cd"
 alias cmi="chezmoi init"
 alias cma="chezmoi add"
+alias cmap="chezmoi apply"
 alias cmd="chezmoi diff"
 alias cme="chezmoi edit"
 
@@ -154,7 +158,7 @@ set -o noclobber
 # Exports 
 export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin
-export PATH="$HOME/.local/zig-0.12:$PATH"
+export PATH=$PATH:$HOME/go/bin
 # ZVM
 export ZVM_INSTALL="$HOME/.zvm/self"
 export PATH="$PATH:$HOME/.zvm/bin"
@@ -268,3 +272,6 @@ function ensure_zsh_syntax_highlighting() {
 }
 
 ensure_zsh_syntax_highlighting
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
